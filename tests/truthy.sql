@@ -1,0 +1,16 @@
+SELECT NOT is_truthy('[]'::jsonb);
+SELECT is_truthy('[1, 2]'::jsonb);
+SELECT NOT is_truthy('0'::jsonb);
+SELECT is_truthy('1'::jsonb);
+SELECT NOT is_truthy('{}'::jsonb);
+SELECT is_truthy('{"a": 2}'::jsonb);
+SELECT NOT is_truthy('""'::jsonb);
+SELECT is_truthy('"abc"'::jsonb);
+SELECT NOT '[]'::jsonb;
+SELECT '[1, 2, 3]'::jsonb::boolean;
+SELECT NOT '0'::jsonb;
+SELECT '1'::jsonb::boolean;
+SELECT NOT '{}'::jsonb;
+SELECT '{"a": 2}'::jsonb::boolean;
+SELECT NOT '""'::jsonb;
+SELECT '"abc"'::jsonb::boolean;
